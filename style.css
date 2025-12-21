@@ -58,15 +58,21 @@ button:hover {
 
 /* Avslöjande */
 .present {
-  margin-top: 2.5rem;
+  max-height: 0;
+  overflow: hidden;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(-10px);
+  transition:
+    max-height 0.6s ease,
+    opacity 0.4s ease,
+    transform 0.4s ease;
 }
 
 .present.show {
+  max-height: 1200px; /* tillräckligt stort */
   opacity: 1;
   transform: translateY(0);
+  margin: 2rem 0;
 }
 
 /* Bild */
