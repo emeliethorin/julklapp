@@ -5,13 +5,24 @@ const present = document.getElementById('present');
 let unlocked = false;
 
 unlockBtn.addEventListener('click', () => {
-  if (!unlocked) {
-    gift.textContent = '🎉';
-    gift.classList.add('open');
+  if (unlocked) return;
 
-    present.classList.add('show'); // expand
+  gift.textContent = '🎉';
+  gift.classList.add('open');
 
-    unlockBtn.classList.add('hide'); // 👈 knappen försvinner
-    unlocked = true;
-  }
+  present.classList.add('show'); // expand presenten
+
+  // 1️⃣ Fadea bort knappen
+  unlockBtn.classList.add('hide');
+
+  // 2️⃣ Ta bort knappen ur layouten när animationen är klar
+  unlockBtn.addEventListener(
+    'transitionend',
+    () => {
+      unlockBtn.style.display = 'none';
+    },
+    { once: true }
+  );
+
+  unlocked = true;
 });
