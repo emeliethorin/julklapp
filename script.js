@@ -9,11 +9,9 @@ unlockBtn.addEventListener('click', () => {
     gift.textContent = '🎉';
     gift.classList.add('open');
 
-    present.classList.add('show'); // 👈 EXPAND HÄR
+    present.classList.add('show'); // expand
 
-    unlockBtn.textContent = 'LADDA OM 🔁';
+    unlockBtn.classList.add('hide'); // 👈 knappen försvinner
     unlocked = true;
-  } else {
-    location.reload();
   }
 });
