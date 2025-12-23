@@ -2,7 +2,8 @@
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: radial-gradient(circle at top, #020617, #000);
+  /*background: radial-gradient(circle at top, #020617, #000);*/
+  background-color: rgb(125, 1, 1);
   color: white;
   text-align: center;
   padding: 2rem 1rem;
